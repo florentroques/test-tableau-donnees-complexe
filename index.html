@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Document</title>
+    <style>
+        /* Responsive design */
+        @media (max-width: 1120px) {
+
+            /* Complex table styles */
+            #table-complex {
+                width: 100%;
+                border-collapse: collapse;
+                font-size: 1rem;
+            }
+
+            #table-complex th,
+            #table-complex td {
+                border: 1px solid #ddd;
+                padding: 0.5rem;
+            }
+
+            #table-complex th {
+                background-color: var(--artwork-major-blue-france);
+                font-weight: bold;
+                color: var(--grey-1000-50);
+            }
+
+            /* #table-complex tr:nth-child(even) {
+                background-color: #f9f9f9;
+            } */
+
+            #table-complex {
+                display: block;
+            }
+
+            #table-complex thead {
+                display: block;
+            }
+
+            #table-complex tbody {
+                display: block;
+            }
+
+            #table-complex tr {
+                display: block;
+                margin-bottom: 1rem;
+            }
+
+            #table-complex td {
+                display: flex;
+                justify-content: space-between;
+                padding: 0.5rem;
+                border: 1px solid #ddd;
+            }
+
+            #table-complex td::before {
+                content: attr(data-label);
+                font-weight: bold;
+                width: 50%;
+            }
+
+            #table-complex tr.first-row {
+                margin-bottom: 0;
+            }
+
+            #table-complex tr.first-row td:last-child {
+                border-bottom: none;
+            }
+
+            #table-complex tr.second-row td:first-child {
+                border-top: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="fr-table fr-table--bordered" id="table-complex-component"
+        data-fr-js-table="true" style="--table-offset: 0;">
+        <div class="fr-table__wrapper" data-fr-js-table-wrapper="true"
+            style="--table-offset: calc(1px + 1rem);">
+            <div class="fr-table__container">
+                <div class="fr-table__content">
+                    <table id="table-complex" class="fr-text-start"
+                        data-fr-js-table-element="true">
+                        <caption class="fr-sr-only"
+                            data-fr-js-table-caption="true">
+                            Tableau décrivant la correspondance entre la grille
+                            boussole et la cotation prévue par le décret
+                            d'application de l'article 191. Chaque ligne
+                            présente une catégorie et sa description,
+                            accompagnées d'exemples.
+                        </caption>
+                        <thead>
+                            <tr>
+                                <th class="fr-cell--fixed custom-background-blue fr-text-start"
+                                    scope="col">
+                                    CORRESPONDANCE GRILLE BOUSSOLE
+                                </th>
+                                <th class="custom-background-blue fr-text-start"
+                                    scope="col" colspan="3">
+                                    Cotation prévue au décret d'application de
+                                    l'article 191 – «&nbsp;MÉTHODE I4CE&nbsp;»
+                                </th>
+                            </tr>
+                            <tr>
+                                <th class="custom-background-light-blue fr-text-start"
+                                    scope="col">
+                                    POUR L’ENSEMBLE DES 6 AXES DE LA TAXONOMIE
+                                </th>
+                                <th class="custom-background-light-blue fr-text-start"
+                                    scope="col">
+                                    CATÉGORIE&nbsp;«&nbsp;ATTÉNUATION&nbsp;»
+                                    I4CE
+                                </th>
+                                <th class="custom-background-light-blue fr-text-start"
+                                    scope="col">
+                                    DESCRIPTION
+                                </th>
+                                <th class="custom-background-light-blue fr-text-start"
+                                    scope="col">
+                                    EXEMPLES
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="first-row">
+                                <th scope="rowgroup"
+                                    data-label="CORRESPONDANCE GRILLE BOUSSOLE"
+                                    class="fr-cell--fixed custom-background-green fr-text-start"
+                                    rowspan="3">
+                                    FAVORABLE
+                                </th>
+                                <td data-label="CATÉGORIE «&nbsp;ATTÉNUATION&nbsp;» I4CE"
+                                    rowspan="2">
+                                    TRÈS FAVORABLE
+                                </td>
+                                <td data-label="DESCRIPTION" rowspan="2">
+                                    Ayant un impact très positif sur le climat
+                                    aujourd'hui et demain ; compatible avec une
+                                    France neutre en carbone.
+                                </td>
+                                <td data-label="EXEMPLES">- Rénovation thermique
+                                    des bâtiments</td>
+                            </tr>
+                            <tr class="second-row">
+                                <td>- Développement des
+                                    transports collectifs</td>
+                            </tr>
+                            <tr>
+                                <td
+                                    data-label="CATÉGORIE   «&nbsp;ATTÉNUATION&nbsp;» I4CE">
+                                    FAVORABLE SOUS CONDITIONS
+                                </td>
+                                <td data-label="DESCRIPTION">
+                                    Permettant une réduction des émissions, mais
+                                    insuffisante pour la neutralité carbone ou
+                                    présentant un risque de verrou
+                                    technologique.
+                                </td>
+                                <td data-label="EXEMPLES">- Achat de bus GNV :
+                                    une flotte de bus au gaz naturel émet moins
+                                    que le diesel mais reste fossile.</td>
+                            </tr>
+                            <!-- Repeat for other rows -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
